@@ -1,2 +1,5 @@
-C:\Users\2221741\code\policy\maven-archetype-simple\src\main\java\org\example\app\LambdaMethodHandler.java
-C:\Users\2221741\code\policy\maven-archetype-simple\src\main\java\org\example\app\Main.java
+C:\Users\2221741\code\policy\backend-serverless\src\main\java\org\example\app\handler\LambdaMethodHandler.java
+C:\Users\2221741\code\policy\backend-serverless\src\main\java\org\example\app\model\Policy.java
+C:\Users\2221741\code\policy\backend-serverless\src\main\java\org\example\app\Service\PolicyService.java
+C:\Users\2221741\code\policy\backend-serverless\src\main\java\org\example\app\model\PolicyType.java
+C:\Users\2221741\code\policy\backend-serverless\src\main\java\org\example\app\Main.java
