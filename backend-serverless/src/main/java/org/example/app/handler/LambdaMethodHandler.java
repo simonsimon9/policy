@@ -21,6 +21,7 @@ public class LambdaMethodHandler {
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder.defaultClient();
         DynamoDBMapper mapper = new DynamoDBMapper(client);
         DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+
         List<Policy> scanResult = mapper.scan(Policy.class, scanExpression);
         return scanResult;
     }
@@ -28,7 +29,13 @@ public class LambdaMethodHandler {
     public Policy registerPolicy(Policy policyRegister, Context context) throws RuntimeException{
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder.defaultClient();
         DynamoDBMapper mapper = new DynamoDBMapper(client);
-        mapper.save(policyRegister);
+        Policy checkExist = mapper.load(Policy.class, policyRegister.getName());
+        if(checkExist == null){
+            mapper.save(policyRegister);
+            return policyRegister;
+        }
         return policyRegister;
     }
+
+
 }
