@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PolicyService } from 'src/app/services/policy.service';
 
 @Component({
   selector: 'app-policy',
@@ -9,14 +8,9 @@ import { PolicyService } from 'src/app/services/policy.service';
 export class PolicyComponent implements OnInit {
 
 
-  constructor( private policyService : PolicyService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  getAll() {
-    console.log("get all");
-    this.policyService.getAllPolicies().subscribe((response)=>{
-      console.log(response);
-    });
-  }
+  
 }

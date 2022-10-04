@@ -1,15 +1,19 @@
 <!--navbar-->
-<nav class="relative container mx-auto p-6 font-bold">
+<nav class=" w-full mx-auto p-6 font-bold bg-white">
     <!--flex container-->
-    <div class="flex items-center justify-between ">
+    <div class="  max-w-7xl mx-auto flex items-center justify-between ">
         <!--logo-->
         <div class="flex pt-2">
             <img class="w-7 h-7 mr-2 pb-1" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
-            <h2 class="text">Policy Search</h2>
+            <a routerLinkActive="active" routerLink="" class="text">Slow Policy Search</a>
         </div>
 
         <!--Menu Items-->
         <div class="hidden md:flex space-x-6" routerLinkActive="active">
+            <a>Search</a>
+            
+            <a>Register Policy</a>
+            <a>Get All</a>
             <a href="#" class="hover:text-darkGrayishBlue" routerLink="login">Login</a>
         </div>
 
@@ -23,11 +27,13 @@
     </div>
     <!--mobile menu-->
     <div class="md:hidden">
-        <div
+        <div routerLinkActive="active"
         id="menu"
         class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">            
-      <a href="#" class="hover:text-darkGrayishBlue">Login</a>
-
+            <a routerLink="login" class="hover:text-darkGrayishBlue">Login</a>
+            <a>Register Policy</a>
+            <a>Get All</a>
+            <a>Search</a>
         </div>
     </div>
 

@@ -9,13 +9,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { LoginComponent } from './components/login/login.component';
 import { PolicyComponent } from './components/policy/policy.component';
+import { PolicylistComponent } from './components/policylist/policylist.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SignUpComponent,
     LoginComponent,
-    PolicyComponent
+    PolicyComponent,
+    PolicylistComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
