@@ -14,7 +14,9 @@
             
             <a>Register Policy</a>
             <a routerLinkActive="active" routerLink="getall" >Get All</a>
-            <a href="#" class="hover:text-darkGrayishBlue" routerLink="login">Login</a>
+            <a *ngIf="userName == undefined || ''" href="#" class="hover:text-darkGrayishBlue" routerLink="login">Login</a>
+            <a *ngIf="userName != undefined || ''" (click)="logout()" href="#" class="hover:text-darkGrayishBlue" routerLink="">Logout</a>
+            <p *ngIf="userName != undefined || ''" href="#" class="hover:text-darkGrayishBlue text-transform: uppercase" routerLink="login">{{userName}}</p>
         </div>
 
         <!--Hamburger icon-->

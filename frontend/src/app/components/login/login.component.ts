@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     this.cognitoService.signIn(this.user)
       .then((res)=>{
-          console.log(res);
+          this.router.navigate([""])
       }).catch(()=>{
         this.loading=false;
       })

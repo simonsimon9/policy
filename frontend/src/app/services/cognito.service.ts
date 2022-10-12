@@ -36,6 +36,7 @@ export class CognitoService {
     return Auth.signIn(user.username, user.password)
     .then(() => {
       this.authenticationSubject.next(true);
+      
     });
   }
    public signOut(): Promise<any> {
@@ -56,6 +57,7 @@ export class CognitoService {
       })
    }
 
+   
    public isAuthenticated(): Promise<boolean> {
     if (this.authenticationSubject.value) {
       return Promise.resolve(true);
