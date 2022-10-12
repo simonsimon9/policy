@@ -1,2 +1,3 @@
-<p>policylist works!</p>
-<button (click)="getAll()">test policy get</button>
+<div *ngFor="let policy of policies">
+    <app-policy [policyData] = "policy"></app-policy>
+</div>
