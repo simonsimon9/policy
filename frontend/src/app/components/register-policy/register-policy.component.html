@@ -1,1 +1,48 @@
-<p>register-policy works!</p>
+<section class="pt-24 bg-gray-50 dark:bg-gray-900">
+  <div class="flex flex-col items-center px-6 mx-auto md:h-screen lg:py-0">
+      <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+          <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
+          Create Policy  
+      </a>
+      <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+              <form class="space-y-4 md:space-y-6" action="#">
+                  <div>
+                      <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Policy Name</label>
+                      <input [(ngModel)]="policy.name" type="username" name="username"  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="policy name" required="">
+                  </div>
+                  <div>
+                      <label for="companyName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company Name</label>
+                      <input [(ngModel)]="policy.companyName" type="companyName" name="companyName"  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="company name" required="">
+                  </div>
+                  <div>
+                    <label for="durationYears" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Duration Years</label>
+                    <input [(ngModel)]="policy.durationYears" name="durationYears"  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="duration years" required="">
+                  </div>
+                  <div>
+                    <label for="initialDeposit" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Initial Deposit</label>
+                    <input [(ngModel)]="policy.initialDeposit" name="initialDeposit"  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="initial deposit" required="">
+                 </div>
+                 <div>
+                    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Insurance Type</label>
+                    <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Choose a insurance type</option>
+                        <option value="VEHICLE">Vehicle</option>
+                        <option value="TRAVEL">Travel</option>
+                        <option value="LIFE">Life</option>
+                        <option value="HEALTH">Health</option>
+                        <option value="CHILD">Child</option>
+                        <option value="RETIREMENT">Retirement</option>
+
+                    </select>
+                 </div>
+                
+                
+                  
+                  <button (click)="registerPolicy()" type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create Policy</button>
+               
+              </form>
+          </div>
+      </div>
+  </div>
+</section>

@@ -10,9 +10,9 @@
 
         <!--Menu Items-->
         <div class="hidden md:flex space-x-6" routerLinkActive="active">
-            <a>Search</a>
+            <a routerLinkActive="active" routerLink="search">Search</a>
             
-            <a>Register Policy</a>
+            <a routerLinkActive="active" routerLink="register-policy">Register Policy</a>
             <a routerLinkActive="active" routerLink="getall" >Get All</a>
             <a *ngIf="userName == undefined || ''" href="#" class="hover:text-darkGrayishBlue" routerLink="login">Login</a>
             <a *ngIf="userName != undefined || ''" (click)="logout()" href="#" class="hover:text-darkGrayishBlue" routerLink="">Logout</a>
@@ -33,7 +33,7 @@
         id="menu"
         class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">            
             <a routerLink="login" class="hover:text-darkGrayishBlue">Login</a>
-            <a>Register Policy</a>
+            <a routerLinkActive="active" routerLink="getall">Register Policy</a>
             <a routerLinkActive="active" routerLink="getall" >Get All</a>
             <a>Search</a>
         </div>
